@@ -16,11 +16,6 @@ $recipePic= get_field("recipe-pic");
 $instructions = get_field("instructions-bodytext");
 $ingredients = get_field("ingredients-bodytext");
 $recipeTitle = get_the_title();
-
-
-
-
-
 ?>
 
 <section class="recipe_details">

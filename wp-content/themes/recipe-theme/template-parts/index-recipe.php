@@ -1,7 +1,4 @@
-<section class="hero">
-      <div class="hero-container">
-
-        <?php 
+<?php 
         $heroImg = get_field("hero-image");
         $miniText = get_field("mini-text");
         $recipeTitle = get_field("recipe-title");
@@ -11,6 +8,8 @@
         ?>
 
 
+<section class="hero" style="background-image: url('<?php echo esc_url($heroImg["url"]) ?>')">
+      <div class="hero-container">
         <div class="hero-text">
           <p class="hero-text-small-header"><?php echo esc_html($miniText) ?></p>
           <p class="hero-text-big-header"><?php echo esc_html($recipeTitle) ?><br><span class="hero-text-bold"><?php echo esc_html($recipeTitleBold) ?></span></p>
@@ -47,7 +46,7 @@
                     $recipeDesc = get_field("desc");
                     $recipeCategory = get_field("category");
                     $recipePic = get_field("recipe-pic");
-/*                     $recipeLink = get_the_permalink(); */
+                    $recipeLink = get_the_permalink();
                     ?>
                     
             
@@ -69,7 +68,7 @@
                 </div>
                 <div class="todays_recipes_content_block_bottom_area_right">
                   <button>
-                    <a href="#">How to</a>
+                    <a href="<?php echo esc_url($recipeLink) ?>">How to</a>
                   </button>
                 </div>
               </div>

@@ -14,13 +14,7 @@
       <div class="menu-container">
         <ul>
           <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="soup.html">Recipes</a>
-          </li>
-          <li>
-            <a href="about.html">About us</a>
+            <a href="<?php echo get_permalink(get_page_by_path("frontpage")->ID) ?>">Home</a>
           </li>
         </ul>
       </div>
